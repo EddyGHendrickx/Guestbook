@@ -19,14 +19,14 @@ error_reporting(E_ALL);
     <body>
 
     <form action="" method="post" name="form">
-        <input type="text" name="title"><label for="title">Title</label>
+        <input type="text" name="title" required><label for="title">Title</label>
         </br>
-        <textarea name="message"></textarea>
+        <textarea required name="message"></textarea>
 
         </br>
-        <input type="text" name="author"><label for="author">Author</label>
+        <input type="text" name="author" required><label for="author">Author</label>
         </br>
-        <button type="submit" name="button">Post</button>
+        <button type="submit" name="button" >Post</button>
         <button type="submit" name="reset" value="reset">destroy</button>
 
     </form>
