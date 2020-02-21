@@ -12,38 +12,34 @@
 
     grid-template-rows: 1fr 4fr;
     grid-template-columns: 1fr 4fr 1fr;
-    grid-template-areas: "author title date"
-                         "message message message";
+    grid-template-areas: "author title date" "message message message";
     background-color: lightblue;
 }
 
 #container > * p:first-child {
     grid-area: title;
     border: 1px solid black;
-    justify-self: center;
-    align-self: center;
+
 
 }
 
 #container > * p:nth-child(2) {
     grid-area: date;
     border: 1px solid black;
-    justify-self: center;
-    align-self: center;
+
 
 }
 
 #container > * p:nth-child(3) {
     grid-area: message;
     border: 1px solid black;
-    justify-self: center;
-    align-self: center;
+
 
 }
 
 #container > * p:nth-child(4) {
     grid-area: author;
     border: 1px solid black;
-    justify-self: center;
-    align-self: center;
+
+
 }
