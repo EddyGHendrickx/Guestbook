@@ -20,7 +20,7 @@ class Guestbook
 
     public function convertJSON($postObject)
     {
-        return json_encode($postObject);
+        return json_encode($postObject, JSON_PRETTY_PRINT);
 
     }
 }

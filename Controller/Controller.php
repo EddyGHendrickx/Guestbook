@@ -15,10 +15,10 @@ if (!isset($_POST['title'])) {
 
 if (!isset($_POST['message'])) {
     $_POST['message'] = "";
-
 } else {
     $messagePost = $_POST['message'];
 }
+
 
 if (!isset($_POST['author'])) {
     $_POST['author'] = "";
@@ -49,6 +49,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $guestbook->writeToFile($guestbook->convertJSON($guestbook->getAllPosts()));
     var_dump($guestbook->getAllPosts());
 
-    $allPosts = (json_decode(file_get_contents('guestbook.json'), true));
+    $allPosts = array_reverse((json_decode(file_get_contents('guestbook.json'), true)));
 }
 

@@ -1,6 +1,9 @@
 <?php
 class Post
 {
+    /**
+     * @var string $title
+     */
     private $title;
     private $date;
     private $content;
@@ -13,12 +16,12 @@ class Post
      * @param $content
      * @param $author
      */
-    public function __construct($title, $date, $content, $author)
+    public function __construct(string $title, $date, $content, $author)
     {
-        $this->title = $title;
-        $this->date = $date;
-        $this->content = $content;
-        $this->author = $author;
+        $this->title = htmlspecialchars($title, ENT_QUOTES);
+        $this->date = htmlspecialchars($date, ENT_QUOTES);
+        $this->content = htmlspecialchars($content, ENT_QUOTES);
+        $this->author = htmlspecialchars($author, ENT_QUOTES);
     }
 
     /**
